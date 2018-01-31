@@ -1,5 +1,5 @@
 public final class Vehicle {
     public Object getName() {
-        return "";
+        return "ZZZ";
     }
 }
