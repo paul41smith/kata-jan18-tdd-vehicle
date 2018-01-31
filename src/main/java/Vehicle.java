@@ -1,6 +1,15 @@
 public final class Vehicle {
-    private String Name;
-    private String Size;
+    private String name;
+    private String size;
+    private Long currentVelocity;
+    private Long currentDirection;
+
+    public Vehicle(String name, String size, Long currentVelocity, Long currentDirection) {
+        this.name = name;
+        this.size = size;
+        this.currentVelocity = currentVelocity;
+        this.currentDirection = currentDirection;
+    }
 
     public String getName() {
         return "ZZZ";
