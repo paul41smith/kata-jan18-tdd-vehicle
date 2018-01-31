@@ -1,10 +1,10 @@
 public final class Vehicle {
     private String name;
     private String size;
-    private Long currentVelocity;
-    private Long currentDirection;
+    private Integer currentVelocity;
+    private Integer currentDirection;
 
-    public Vehicle(String name, String size, Long currentVelocity, Long currentDirection) {
+    public Vehicle(String name, String size, Integer currentVelocity, Integer currentDirection) {
         this.name = name;
         this.size = size;
         this.currentVelocity = currentVelocity;
@@ -19,20 +19,20 @@ public final class Vehicle {
         return size;
     }
 
-    public Long getCurrentVelocity() {
+    public Integer getCurrentVelocity() {
         return currentVelocity;
     }
 
-    public Long getCurrentDirection() {
+    public Integer getCurrentDirection() {
         return currentDirection;
     }
 
     //Method to add direction to the current direction
-    void steer(int direction) {
+    void steer(Integer direction) {
     }
 
     //Method to set velocity to currentVelocity and direction to currentDirection.
-    void move(int velocity, int direction) {
+    void move(Integer velocity, Integer direction) {
     }
 
     //Method to change the currentVelocity to zero

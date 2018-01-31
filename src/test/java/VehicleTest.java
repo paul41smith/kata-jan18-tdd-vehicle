@@ -7,8 +7,8 @@ public final class VehicleTest {
 
     private final String testName = new String("Outlander");
     private final String testSize = new String("4WD");
-    private final Long testVelocity = new Long(0L);
-    private final Long testDirection = new Long(0L);
+    private final Integer testVelocity = new Integer(0);
+    private final Integer testDirection = new Integer(0);
 
 
     @Test
@@ -26,12 +26,35 @@ public final class VehicleTest {
     @Test
     public void ShouldGetCurrentVelocity() throws Exception {
         final Vehicle v = new Vehicle(testName, testSize, testVelocity, testDirection);
-        assertThat(v.getCurrentVelocity(), is(0L));
+        assertThat(v.getCurrentVelocity(), is(0));
     }
 
     @Test
     public void ShouldGetCurrentDirection() throws Exception {
         final Vehicle v = new Vehicle(testName, testSize, testVelocity, testDirection);
-        assertThat(v.getCurrentDirection(), is(0L));
+        assertThat(v.getCurrentDirection(), is(0));
+    }
+
+    @Test
+    public void ShouldChangeVelocity() throws Exception {
+        final Integer startVelocity = new Integer(0);
+        final Integer endVelocity = new Integer(5);
+
+        final Vehicle v = new Vehicle(testName, testSize, startVelocity, testDirection);
+        v.move(5, 0);
+        assertThat(v.getCurrentVelocity(), is(5));
+    }
+
+    @Test
+    public void ShouldChangeDirection() throws Exception {
+        final Integer startVelocity = new Integer(0);
+        final Integer endVelocity = new Integer(9);
+        final Integer startDirection = new Integer(0);
+        final Integer endDirection = new Integer(10);
+
+        final Vehicle v = new Vehicle(testName, testSize, startVelocity, startDirection);
+        v.move(endVelocity, endDirection);
+        assertThat(v.getCurrentVelocity(), is(endVelocity));
+        assertThat(v.getCurrentVelocity(), is(endDirection));
     }
 }
