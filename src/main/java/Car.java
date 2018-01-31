@@ -1,3 +1,2 @@
-public final class Car  {
-//public final class Car extends Vehicle {
+public final class Car extends Vehicle {
 }

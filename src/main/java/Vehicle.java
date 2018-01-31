@@ -1,8 +1,12 @@
-public final class Vehicle {
+class Vehicle {
     private String name;
     private String size;
     private Integer currentVelocity;
     private Integer currentDirection;
+
+    public Vehicle() {
+        this("","" ,0 ,0 );
+    }
 
     public Vehicle(String name, String size, Integer currentVelocity, Integer currentDirection) {
         this.name = name;
