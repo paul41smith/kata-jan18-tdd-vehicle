@@ -1,5 +1,13 @@
 public final class Vehicle {
-    public Object getName() {
+    private String Name;
+    private String Size;
+
+    public String getName() {
         return "ZZZ";
     }
+
+    public String getSize() {
+        return "4WD";
+    }
+
 }

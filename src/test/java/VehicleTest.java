@@ -10,7 +10,12 @@ public final class VehicleTest {
     @Test
     public void ShouldGetName() throws Exception {
         Vehicle v = new Vehicle();
-        v.getName();
         assertThat(v.getName(), is(name));
+    }
+
+    @Test
+    public void ShouldGetSize() throws Exception {
+        Vehicle v = new Vehicle();
+        assertThat(v.getSize(), is("4WD"));
     }
 }
