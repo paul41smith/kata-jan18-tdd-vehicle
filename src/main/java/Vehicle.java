@@ -10,4 +10,7 @@ public final class Vehicle {
         return "4WD";
     }
 
+    public Long getCurrentVelocity() {
+        return 0L;
+    }
 }
