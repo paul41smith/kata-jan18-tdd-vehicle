@@ -36,7 +36,7 @@ public final class VehicleTest {
     }
 
     @Test
-    public void ShouldChangeVelocity() throws Exception {
+    public void ShouldSetVelocity() throws Exception {
         final Integer startVelocity = new Integer(0);
         final Integer endVelocity = new Integer(5);
 
@@ -46,7 +46,7 @@ public final class VehicleTest {
     }
 
     @Test
-    public void ShouldChangeDirection() throws Exception {
+    public void ShouldSetDirectionAndVelocity() throws Exception {
         final Integer startVelocity = new Integer(0);
         final Integer endVelocity = new Integer(9);
         final Integer startDirection = new Integer(0);
@@ -55,6 +55,19 @@ public final class VehicleTest {
         final Vehicle v = new Vehicle(testName, testSize, startVelocity, startDirection);
         v.move(endVelocity, endDirection);
         assertThat(v.getCurrentVelocity(), is(endVelocity));
-        assertThat(v.getCurrentVelocity(), is(endDirection));
+        assertThat(v.getCurrentDirection(), is(endDirection));
+    }
+
+    @Test
+    public void ShouldChangeDirection() throws Exception {
+        final Integer testVelocity = new Integer(0);
+        final Integer startDirection = new Integer(5);
+        final Integer directionChange = new Integer(20);
+        final Integer endDirection = new Integer(25);
+
+        final Vehicle v = new Vehicle(testName, testSize, testVelocity, startDirection);
+        v.steer(directionChange);
+        assertThat(v.getCurrentVelocity(), is(testVelocity));
+        assertThat(v.getCurrentDirection(), is(endDirection));
     }
 }

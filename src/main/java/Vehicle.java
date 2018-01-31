@@ -29,13 +29,18 @@ public final class Vehicle {
 
     //Method to add direction to the current direction
     void steer(Integer direction) {
+        this.currentDirection += direction;
     }
 
     //Method to set velocity to currentVelocity and direction to currentDirection.
     void move(Integer velocity, Integer direction) {
+        this.currentVelocity = velocity;
+        this.currentDirection = direction;
     }
 
     //Method to change the currentVelocity to zero
     void stop() {
+        this.currentDirection = 0;
+        this.currentVelocity = 0;
     }
 }
