@@ -25,6 +25,11 @@ public final class VehicleTest {
     public void ShouldGetCurrentVelocity() throws Exception {
         final Vehicle v = new Vehicle();
         assertThat(v.getCurrentVelocity(), is(0L));
+    }
 
+    @Test
+    public void ShouldGetCurrentDirection() throws Exception {
+        final Vehicle v = new Vehicle();
+        assertThat(v.getCurrentDirection(), is(0L));
     }
 }

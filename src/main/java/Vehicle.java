@@ -13,4 +13,8 @@ public final class Vehicle {
     public Long getCurrentVelocity() {
         return 0L;
     }
+
+    public Long getCurrentDirection() {
+        return 0L;
+    }
 }
