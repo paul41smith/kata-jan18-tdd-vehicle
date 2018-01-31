@@ -70,4 +70,13 @@ public final class VehicleTest {
         assertThat(v.getCurrentVelocity(), is(testVelocity));
         assertThat(v.getCurrentDirection(), is(endDirection));
     }
+
+    @Test
+    public void ShouldStop() throws Exception {
+
+        final Vehicle v = new Vehicle("MyVehicle", "SUV", 11, 30);
+        v.stop();
+        assertThat(v.getCurrentVelocity(), is(0));
+        assertThat(v.getCurrentDirection(), is(0));
+    }
 }
