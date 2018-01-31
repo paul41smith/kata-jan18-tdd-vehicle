@@ -12,19 +12,19 @@ public final class Vehicle {
     }
 
     public String getName() {
-        return "ZZZ";
+        return name;
     }
 
     public String getSize() {
-        return "4WD";
+        return size;
     }
 
     public Long getCurrentVelocity() {
-        return 0L;
+        return currentVelocity;
     }
 
     public Long getCurrentDirection() {
-        return 0L;
+        return currentDirection;
     }
 
     //Method to add direction to the current direction
